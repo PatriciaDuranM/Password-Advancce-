@@ -7,6 +7,41 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
+    <main class="main">
+      <h2 id="password" class="boxpass">P4$5W0RD!</h2>
+      <h3 id="length">LENGTH: 4</h3>
+      <div class="boxes">
+        <div id="" class="box">
+          <h2>4</h2>
+          <input
+            class="seleccion"
+            id="barra"
+            type="range"
+            min="4"
+            max="32"
+            step="1"
+          />
+          <h2>32</h2>
+        </div>
+        <div class="box">
+          <h3>Include Uppercase</h3>
+          <input id="checkbox1" type="checkbox" />
+        </div>
+        <div class="box">
+          <h3>Include Lowercase</h3>
+          <input id="checkbox2" type="checkbox" />
+        </div>
+        <div class="box">
+          <h3>Include Numbers</h3>
+          <input id="checkbox3" type="checkbox" />
+        </div>
+        <div class="box">
+          <h3>Include Symbols</h3>
+          <input id="checkbox4" type="checkbox" />
+        </div>
+      </div>
+      <button id="buttonpass" class="button">Generate Password</button>
+    </main>
     <script src="js/scripts.js"></script>
   </body>
 </html>
