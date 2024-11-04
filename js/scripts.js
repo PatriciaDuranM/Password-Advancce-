@@ -28,8 +28,50 @@ const numbers = "0123456789";
 const symbols = "!@#$%^&*()_+-={}[]:;<>,.?/";
 
 /*Generar una letra aleatoria"*/
-const characters =
-  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890!@#$%^&*()_+-={}[]:;<>,.?/";
+let characters = "";
+
+/* Primero generamos la lista de la cual va a tomar los caracteres aleatorios.
+Se usa el mismo evento que el de activar el boton, porque no puede haber dos eventos iguales. Un elemento puede tener distintos eventos(click, mouseover...) pero no dos clicks con distintas funciones conectadas */
+
+const selection = () => {
+  characters = "";
+  if (checkbox1Element.checked) {
+    characters = characters + mayus;
+  }
+  if (checkbox2Element.checked) {
+    characters = characters + minus;
+  }
+  if (checkbox3Element.checked) {
+    characters = characters + numbers;
+  }
+  if (checkbox4Element.cheked) {
+    characters = characters + symbols;
+  }
+  console.log(characters);
+};
+
+/*Conectar los checkbox con el botón*/
+const activebotton = () => {
+  if (
+    checkbox1Element.checked ||
+    checkbox2Element.checked ||
+    checkbox3Element.checked ||
+    checkbox4Element.checked
+  ) {
+    buttonElement.disabled = false;
+  } else {
+    buttonElement.disabled = true;
+  }
+  selection();
+};
+
+/*eventos de checkbox*/
+checkbox1Element.addEventListener("click", activebotton);
+checkbox2Element.addEventListener("click", activebotton);
+checkbox3Element.addEventListener("click", activebotton);
+checkbox4Element.addEventListener("click", activebotton);
+
+/*Generar el caracter aleatorio*/
 
 const randomCharacter = () => {
   return characters[Math.floor(Math.random() * characters.length)];

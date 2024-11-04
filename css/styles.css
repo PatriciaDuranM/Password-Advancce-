@@ -41,9 +41,9 @@ body{
 }
 
 .boxpass{
-    width: 480px;
-    height: 64px;
-    padding: 15px;
+    width: 560px;
+    height: 72px;
+    padding: 20px;
     text-align: center;
     background-color: rgba(108, 104, 112, 0.336);
     border-radius: 10px;
@@ -58,7 +58,7 @@ h3{
 
 .box{
     height: 64px;
-    width: 480px;
+    width: 520px;
     display: flex;
     padding-inline: 30px;
     flex-direction: row;
@@ -83,4 +83,8 @@ h3{
     background-color: rgb(160, 25, 160);
     border-radius: 10px;
     border: none;
+}
+
+.button:disabled{
+    background-color: aqua;
 }
